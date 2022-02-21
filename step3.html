@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pwa_install</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="height:579px;">
+    <div style="height:506px;">
+        <div class="header-blue" style="height:656px;background-color:rgb(98,116,136);">
+            <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+                <div class="container"><a class="navbar-brand" href="index.html">PWA_CODE</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse justify-content-end"
+                        id="navcol-1">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item" role="presentation"><a class="nav-link active" href="https://github.com/its-me-satya">Github</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="jumbotron" style="height:578px;">
+                <p>Copy this json code from the input below and add this into "manifest.json" file &nbsp;into your web files seperatly!!<br></p>
+                <p>You have to set the path for icons, make sure that your icon size must be 512x512, 192x192 and setup the json details upto your requirement<br></p>
+                <div class="col"><textarea class="form-control-lg d-inline" name="sw.js" readonly="" autofocus="" style="width:300px;height:260px;font-size:13px;">{ 	"name":"PWA Tutorial", 	"short_name":"PWA", 	"start_url":"index.html", 	"display":"standalone", 	"background_color":"#5900b3", 	"theme_color":"black", 	"scope": ".", 	"description":"This is a PWA tutorial.", 	"icons":[ 	{ 	"src":"AppIcons/playstore.png",					 	"sizes":"192x192", 	"type":"image/png" 	}, 	{ 	"src":"AppIcons/playstore.png", 	"sizes":"512x512", 	"type":"image/png" 	} ] }</textarea>
+                    <div><a class="btn btn-dark" role="button" href="index.html" style="margin-right:0px;margin-left:8px;">Done</a></div>
+                </div>
+                <p></p>
+            </div>
+            <div></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

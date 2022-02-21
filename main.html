@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pwa_install</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="height:544px;">
+    <div style="height:140px;">
+        <div class="header-blue" style="height:656px;background-color:rgb(98,116,136);">
+            <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+                <div class="container"><a class="navbar-brand" href="index.html">PWA_CODE</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse justify-content-end"
+                        id="navcol-1">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item" role="presentation"><a class="nav-link active" href="https://github.com/its-me-satya">Github</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="jumbotron" style="margin-top:-3px;">
+                <p>Lets get started!!<br></p>
+                <p>As you Paste Your Index.html code in the input above and add the following &lt;link&gt; &amp; &lt;script&gt; tag snippet &nbsp;before the "&lt;body&gt;" tag of index.html from the below code!!<br></p><textarea readonly="" autofocus=""
+                    style="width:290px;height:131px;margin-left:26px;">&lt;link rel="manifest" href="manifest.json"&gt;    &lt;script&gt; //if browser support service worker if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js'); }; &lt;/script&gt;</textarea>
+                <div
+                    class="col"><textarea id="textarea" placeholder="First Place Your &quot;index.html&quot; code here" class="form-control-lg d-inline" style="width:300px;height:260px;margin-left:8px;"></textarea>
+                    <p>Also,&nbsp;add the following &lt;script&gt; tag snippet&nbsp;&nbsp;below and add the following &lt;script&gt; code before the "&lt;body&gt;" tag of index.html !!<br></p><textarea readonly="" style="width:290px;height:128px;margin-left:7px;margin-top:-7px;">&lt;script&gt;         window.addEventListener('load', () =&gt; {         registerSW();         });              // Register the Service Worker         async function registerSW() {         if ('serviceWorker' in navigator) {             try {             await navigator                     .serviceWorker                     .register('sw.js');             }             catch (e) {             console.log('SW registration failed');             }         }         }     &lt;/script&gt;</textarea>
+                    <div
+                        class="clearfix"></div>
+            <div style="margin-top:7px;"><button onclick="copy()" class="btn btn-primary" type="button">Copy</button><a class="btn btn-primary" role="button" href="step2.html" style="margin-right:0px;margin-left:8px;">Next Step</a></div>
+        </div>
+        <p></p>
+    </div>
+    <div></div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
