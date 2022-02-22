@@ -17,7 +17,5 @@
     "url": "https://github.com/its-me-satya/pwa/issues"
   },
   "homepage": "https://github.com/its-me-satya/pwa#readme",
-  "dependencies": {
-    "downloadjs": "^1.4.7"
-  }
+  "dependencies": {}
 }
