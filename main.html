@@ -4,16 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="PWA_CODE">
+    <meta name="description" content="Simple PWA_CODE add on to your website with few simple steps">
+    <meta name="keywords" content="PWA, apps, manifest, network">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Satya Pavan Vanka">
     <title>pwa_install</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
     <link rel="stylesheet" href="assets/css/Footer-Basic.css">
     <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Projects-Horizontal.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body style="height:544px;">
-    <div style="height:140px;">
+<body style="height:520px;">
+    <div style="height:64px;">
         <div class="header-blue" style="height:656px;background-color:rgb(98,116,136);">
             <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
                 <div class="container"><a class="navbar-brand" href="index.html">PWA_CODE</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
@@ -25,25 +35,108 @@
                     </div>
                 </div>
             </nav>
-            <div class="jumbotron" style="margin-top:-3px;">
-                <p>Lets get started!!<br></p>
-                <p>As you Paste Your Index.html code in the input above and add the following &lt;link&gt; &amp; &lt;script&gt; tag snippet &nbsp;before the "&lt;body&gt;" tag of index.html from the below code!!<br></p><textarea readonly="" autofocus=""
-                    style="width:290px;height:131px;margin-left:26px;">&lt;link rel="manifest" href="manifest.json"&gt;    &lt;script&gt; //if browser support service worker if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js'); }; &lt;/script&gt;</textarea>
-                <div
-                    class="col"><textarea id="textarea" placeholder="First Place Your &quot;index.html&quot; code here" class="form-control-lg d-inline" style="width:300px;height:260px;margin-left:8px;"></textarea>
-                    <p>Also,&nbsp;add the following &lt;script&gt; tag snippet&nbsp;&nbsp;below and add the following &lt;script&gt; code before the "&lt;body&gt;" tag of index.html !!<br></p><textarea readonly="" style="width:290px;height:128px;margin-left:7px;margin-top:-7px;">&lt;script&gt;         window.addEventListener('load', () =&gt; {         registerSW();         });              // Register the Service Worker         async function registerSW() {         if ('serviceWorker' in navigator) {             try {             await navigator                     .serviceWorker                     .register('sw.js');             }             catch (e) {             console.log('SW registration failed');             }         }         }     &lt;/script&gt;</textarea>
-                    <div
-                        class="clearfix"></div>
-            <div style="margin-top:7px;"><button onclick="copy()" class="btn btn-primary" type="button">Copy</button><a class="btn btn-primary" role="button" href="step2.html" style="margin-right:0px;margin-left:8px;">Next Step</a></div>
+            <div></div>
         </div>
-        <p></p>
     </div>
-    <div></div>
+    <div class="projects-horizontal" style="background-color:#ffffff;">
+        <div class="container" style="height:600px;">
+            <div class="intro">
+                <h2 class="text-center align-content-center">Hello, Developer<br></h2>
+                <p class="text-center" style="margin-top:-22px;">Follow these steps for PWA Add-on to your website</p>
+            </div>
+            <div class="row projects" style="margin-top:-29px;">
+                <div class="col-sm-6 item">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/html.png" style="width:200px;"></a></div>
+                        <div class="col">
+                            <p class="description" style="margin-top:5px;color:#373737;"><strong>Step-1 :</strong> Firstly, edit &amp; add pwa code of &lt;links&gt; &amp; &lt;scripts&gt; into your index.html</p>
+                            <div style="margin-top:10px;"><div role="dialog" tabindex="-1" class="modal fade" id="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Edit index.html</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+            <div class="modal-body">
+                <p class="float-left text-muted"><b>Section - 1</b> : Firstly, Copy and paste this "manifest header links and serviceworker script inside the &lt;head&gt; tag 👇"</p>
+                <br>
+                <textarea rows="4" cols="50">
+  <link rel="manifest" href="/manifest.json">
+<script>
+    //if browser support service worker
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js');
+    };
+  </script>
+  </textarea><br>
+                 <p class="float-left text-muted"><b>Section - 2</b> : Secondly, Copy and paste this " script before &lt;/body&gt; tag "</p>
+                
+                <textarea  rows="4" cols="50">
+   <script>
+        window.addEventListener('load', () => {
+        registerSW();
+        });
+    
+        // Register the Service Worker
+        async function registerSW() {
+        if ('serviceWorker' in navigator) {
+            try {
+            await navigator
+                    .serviceWorker
+                    .register('sw.js');
+            }
+            catch (e) {
+            console.log('SW registration failed');
+            }
+        }
+        }
+    </script>
+  </textarea><br>
+                <p class="float-left text-muted"><b>Your index.html File</b> : </p><textarea id="textarea" rows="4" cols="50" placeholder="edit your index.html and add back to your root directory after making changes in the code!!"></textarea>
+                
+            </div>
+            <div class="modal-footer"><button onclick="copy()" class="btn btn-dark" type="button"><i class="fa fa-clone" aria-hidden="true"></i> Copy Final Code</button></div>
+        </div>
     </div>
+</div><a class="btn btn-dark" role="button"  href="#myModal" data-toggle="modal" style="margin-top:20px;"><strong>Edit index.html</strong></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 item">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/js.png"></a>
+                            <p class="description" style="color:#ff2f2f;font-size:12px;line-height:15px;"><strong>⚠ Don't worry if you get any Red Alert box, its' safe to Download</strong><br></p>
+                        </div>
+                        <div class="col">
+                            <p class="description" style="color:#373737;"><strong>Step-2</strong> : Download this "<strong>serviceworker.js</strong>" and add this into root of web files<br>(root directory)</p><a id="sw" class="btn btn-dark" download="serviceworker.js" role="button" href="serviceworker.js"  style="margin-top:15px;"><strong>Download</strong></a>
+</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 item">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/json.png"></a>
+                            <p class="text-center description" style="color:#9b46c2;font-size:12px;line-height:15px;"><strong>Don't forgot to edit your information in the .json file</strong><br></p>
+                        </div>
+                        <div class="col">
+                            <p class="description" style="color:#373737;"><strong>Step-3</strong> : Download this "<strong>manifest.json</strong>" and add this into root of web files(root directory)<br></p><a onclick="onDownload()" class="btn btn-dark" role="button" style="color:#fff;margin-top:31px;"><strong>Download</strong></a></div>
+                    </div>
+                </div>
+                <div class="col-sm-6 item">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/great.png"></a></div>
+                        <div class="col">
+                            <h3 class="name">Great!! Now Expierence Your PWA</h3>
+                            <p class="description" style="color:#373737;">By the way, dont forgot to edit manifest.json</p>
+                            <div><a class="btn btn-link" role="button" href="/index" data-toggle="modal" style="font-weight:bold;margin-top:6px;">Back To Home</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bs-animation.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/serviceworker.js"></script>
 </body>
 
 </html>
